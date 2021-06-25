@@ -7,6 +7,11 @@
 
 Restful WebService 구현
 
+# Spring Boot
+- DispatcherServletAutoConfiguration 
+- ErrorMvcAutoConfiguration
+- HttpMessageConvertersAutoConfiguration -> Json Convert
+
 # lombok 
   - @Data: get,set,toString에 대한 메서드 자동 생성 
   - @AllArgsConstructor: 모든 아규먼트의 컨스트럭터 생성 (생성자)
