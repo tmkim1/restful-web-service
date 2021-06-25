@@ -7,4 +7,11 @@
 
 Restful WebService 구현
 
+#lombok 
+  .@Data: get,set,toString에 대한 메서드 자동 생성 
+  .@AllArgsConstructor: 모든 아규먼트의 컨스트럭터 생성 (생성자)
+  
+#JavaBean 
+  .Stirng 형이 아닌 JavaBean 클래스를 생성하여 View에 반환 시 JSON 형태로 자동으로 변환되어 반환 됨.  
+
 
