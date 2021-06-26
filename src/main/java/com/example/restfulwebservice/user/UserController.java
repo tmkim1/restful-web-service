@@ -1,8 +1,6 @@
 package com.example.restfulwebservice.user;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,6 +25,12 @@ public class UserController {
     @GetMapping("/user /{id}")
     public User retrieveUser(@PathVariable int id) {
         return service.findOne(id);
+    }
+
+    // User 등록, @RequestBody 어노테이션을 사용하면 HTTP 요청 몸체를 자바 객체로 매핑하여 전달 받을수 있음
+    @PostMapping("/users")
+    public void createUser(@RequestBody User user) {
+        User savedUser = service.save(user);
     }
 
 
