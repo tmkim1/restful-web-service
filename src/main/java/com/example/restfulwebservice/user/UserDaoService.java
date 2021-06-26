@@ -34,6 +34,8 @@ public class UserDaoService {
         for(User user : users) {
             if(user.getId().equals(id)) return user;
         }
+
+        // statusCode 제어를 위한 예외 처리
         return null;
     }
 }
