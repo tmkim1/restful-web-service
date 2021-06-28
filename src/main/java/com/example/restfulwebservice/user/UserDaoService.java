@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -36,6 +37,22 @@ public class UserDaoService {
         }
 
         // statusCode 제어를 위한 예외 처리
+        return null;
+    }
+
+    public User deleteById(int id) {
+        // 리스트<클래스> -> 열거형으로 전환
+        Iterator<User> iterator =  users.iterator();
+
+        while(iterator.hasNext()) {
+            User user = iterator.next();
+
+            if(user.getId() == id) {
+                iterator.remove();
+                return user;
+            }
+        }
+
         return null;
     }
 }
