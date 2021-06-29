@@ -14,6 +14,7 @@ public class RestfulWebServiceApplication {
         SpringApplication.run(RestfulWebServiceApplication.class, args);
     }
 
+    @Bean
     public org.springframework.web.servlet.LocaleResolver localeResolver() {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         localeResolver.setDefaultLocale(Locale.KOREA);
