@@ -25,9 +25,20 @@ public class AdminUserController {
 
     // 전체 사용자 조회
     @GetMapping("/users")
-    public List<User> retrieveAllUsers() {
+    public MappingJacksonValue retrieveAllUsers() {
 
-        return service.findAll();
+        //option+command+v 자동 Return 생성 // Refactor -> introduce variable
+        List<User> users = service.findAll();
+
+        SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.
+                filterOutAllExcept("id", "name", "joinDate", "password");
+
+        FilterProvider filters = new SimpleFilterProvider().addFilter("UserInfo",filter);
+
+        MappingJacksonValue mapping = new MappingJacksonValue(users);
+        mapping.setFilters(filters);
+
+        return mapping;
     }
 
     //Get /users/1 or /users/10 -> String // PathVariable 에서 타입을 int로 설정하면 자동으로 int로 받아와짐
