@@ -20,3 +20,10 @@ Restful WebService 구현
   - Stirng 형이 아닌 JavaBean 클래스를 생성하여 View에 반환 시 JSON 형태로 자동으로 변환되어 반환 됨.  
 
 
+
+# REST API
+- [Response: XML 설정](https://tmkim.tistory.com/5)
+- [Header를 이용한 버전관리](https://tmkim.tistory.com/4)
+- [REST API Level3을 위한 HATEOS 설정](https://tmkim.tistory.com/6)
+
+
