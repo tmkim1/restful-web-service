@@ -24,5 +24,6 @@ Restful WebService 구현
 # REST API
 - [Response: XML 설정](https://tmkim.tistory.com/5)
 - [Header를 이용한 버전관리](https://tmkim.tistory.com/4)
+- [REST API Level3을 위한 HATEOS 설정](https://tmkim.tistory.com/6)
 
 
