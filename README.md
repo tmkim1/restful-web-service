@@ -22,7 +22,7 @@ Restful WebService 구현
 
 
 # REST API
-[Response: XML 설정](https://tmkim.tistory.com/5)
-[Header를 이용하 버전관리](https://tmkim.tistory.com/4)
+- [Response: XML 설정](https://tmkim.tistory.com/5)
+- [Header를 이용한 버전관리](https://tmkim.tistory.com/4)
 
 
