@@ -15,7 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor // 디펄트 생성자 구현
 //@JsonIgnoreProperties(value={"password","ssn"})
-@JsonFilter("UserInfo")
+//@JsonFilter("UserInfo")
 public class User {
     private Integer id;
 
