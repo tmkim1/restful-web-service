@@ -39,7 +39,7 @@ public class UserController {
             throw new UserNotFoundException(String.format("ID[%s] not found ", id));
         }
 
-        // 링크 도움, 추가 정보를 담기 위함
+        // HATEOAS: 링크 도움, 추가 정보를 담기 위함
         EntityModel<User> model = new EntityModel<>(user);
         WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllUsers());
         model.add(linkTo.withRel("all-users"));
