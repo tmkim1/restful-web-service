@@ -42,9 +42,11 @@ public class AdminUserController {
         return mapping;
     }
 
-    //Get /users/1 or /users/10 -> String // PathVariable 에서 타입을 int로 설정하면 자동으로 int로 받아와짐
-    //Filter 적용을 위한 반환 타입 User => MappingJacksonValue 변경
-    @GetMapping("/v1/user/{id}")
+//    Get /users/1 or /users/10 -> String // PathVariable 에서 타입을 int로 설정하면 자동으로 int로 받아와짐
+//    Filter 적용을 위한 반환 타입 User => MappingJacksonValue 변경
+//    @GetMapping("/v1/user/{id}")
+//    @GetMapping( value = "/user/{id}", headers = "X-API-VERSION=1")
+    @GetMapping( value = "/user/{id}", produces =  "application/vnd.company.appv1+json")
     public MappingJacksonValue retrieveUserV1(@PathVariable int id) {
         User user = service.findOne(id);
 
@@ -63,7 +65,10 @@ public class AdminUserController {
         return mapping;
     }
 
-    @GetMapping("/v2/user/{id}")
+//    @GetMapping("/v2/user/{id}")
+//    @GetMapping(value = "/user/{id}/", params = "version=2") //postman 호출 방법: http://localhost:8088/admin/user/1/?version=2
+//    @GetMapping( value = "/user/{id}", headers = "X-API-VERSION=2")
+    @GetMapping( value = "/user/{id}", produces =  "application/vnd.company.appv2+json")
     public MappingJacksonValue retrieveUserV2(@PathVariable int id) {
         User user = service.findOne(id);
 
