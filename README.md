@@ -27,3 +27,13 @@ Restful WebService 구현
 - [REST API Level3을 위한 HATEOS 설정](https://tmkim.tistory.com/6)
 
 
+# RESTful API 설계 가이드 
+- Consumer first
+- 적절한 Status Code 반환 
+- No Secure info in URI 
+- Use plurals
+  . 단건 조회라 하더라도 복수 형태로 표시 (/users/1)
+- 동사형 보다는 명사형으로 사용 
+- 비슷한 기능은 1가지 명칭으로 통일하여 Parameter를 바꿔주는 식으로 사용 
+
+
